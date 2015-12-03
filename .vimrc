@@ -10,6 +10,20 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'davidhalter/jedi-vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+Plugin 'janko-m/vim-test'
+Plugin 'klen/python-mode'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tomtom/tlib_vim'
+Plugin 'tpope/vim-dispatch.git'
+Plugin 'tpope/vim-fugitive'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -119,3 +133,18 @@ endif
 "autocmd FileType python compiler pylint
 map <F2> :cnext<CR>
 map <F3> :cnext<CR>
+map <F12> :NERDTreeToggle<CR>
+
+let g:pymode_rope_completion = 0
+let g:pymode_rope_complete_on_dot = 0
+
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+nmap <silent> <leader>g :TestVisit<CR>
+let test#python#runner = 'djangotest'
+let test#strategy = "dispatch"
+"let test#strategy = "tmux"
+"let test#strategy = "iterm"
+let test#python#djangotest#file_pattern = 'tests'
