@@ -1,3 +1,4 @@
+"colorscheme PaperColor
 colorscheme blue
 "colorscheme desert256
 "colorscheme evening
@@ -5,8 +6,11 @@ colorscheme blue
 "colorscheme koehler
 filetype indent plugin on
 filetype on
+let python_highlight_all = 1
+set autoindent
 "set background=dark
 "set columns=80
+set cursorline
 set dictionary=/usr/share/dict/american-english
 set encoding=utf-8
 set expandtab
@@ -19,6 +23,7 @@ set modeline
 set number
 set ruler
 set shiftwidth=4
+set showmatch
 set softtabstop=4
 set t_Co=256
 set tabstop=4
